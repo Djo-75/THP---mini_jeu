@@ -35,6 +35,7 @@ class Player
         other_player.compute_damage
 
         puts "Il/elle lui inflige #{other_player.compute_damage} dégâts"    # ça marche
+        puts
 
         other_player.gets_damage(other_player.compute_damage) # je stocke ici 
     end
@@ -49,7 +50,7 @@ class HumanPlayer < Player
     attr_accessor :weapon_level
 
     def initialize(name)    # ok
-
+        @name = name
         @weapon_level = 1
         @life_points = 100
 
@@ -95,62 +96,11 @@ class HumanPlayer < Player
         if health_pack == 6
             puts "Bravo, tu as trouvé un pack de +50 points de vie !"
             @life_points = @life_points + 80
-                if @life_points > 100
-                    @life_points = 100
-                end
+            if @life_points > 100
+                @life_points = 100
+            end
         end
     end
-
-binding.pry
-
-
 end
 
 
-
-
-
-
-# Elle commence également par lancer un "dé" dont le résultat sera compris entre 1 et 6. En fonction du résultat, voilà ce qu'elle devra faire :
-
-# Si le résultat est égal à 1, le joueur n'a rien trouvé et on retourne simplement le string "Tu n'as rien trouvé... ".
-
-# joueur a trouvé un pack de 50 points de vie. On va donc augmenter sa vie de 50 points mais sans qu'elle puisse dépasser 100 points
-
-# Si le résultat est égal à 6, le joueur a trouvé un pack de 80 points de vie. On va donc augmenter sa vie de 80 points mais sans qu'elle puisse dépasser 100 points. Puis on va retourner le string "Waow, tu as trouvé un pack de +80 points de vie !".
-# 
-
-
-# Exo 1.0
-
-# player1 = Player.new("Josiane")
-# player2 = Player.new("José")
-
-# puts "À ma droite #{player1.name}"
-# puts "À ma gauche #{player2.name}"
-# puts
-
-
-
-
-# while player1.life_points > 0 && player2.life_points > 0
-    
-#     puts "Voici l'état de chaque joueur"
-#     puts
-#     puts "#{player1.show_state}"
-#     puts
-#     puts "#{player2.show_state}"
-#     puts
-#     puts "Passons à la phase d'attaque :"
-#     puts
-#         player1.attacks(player2)
-#         if player2.life_points <= 0
-#             break
-#         end
-#     puts   
-#         player2.attacks(player1)
-#     puts 
-# end
-
-
-# player1 = Player.new("José")
