@@ -17,5 +17,9 @@ puts puts
 puts "Quel est ton prénom ?"
 gets.chomp
 
-player1 = Player.new("gets.chomp")
-puts player1
+user = Player.new("gets.chomp")
+puts user
+
+player1 = Player.new("Josiane")
+player2 = Player.new("José")
+
