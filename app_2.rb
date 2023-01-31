@@ -15,8 +15,7 @@ puts "------------------------------------------------"
 puts puts
 
 puts "Quel est ton prénom ?"
-
-puts gets.chomp
+gets.chomp
 
 player1 = Player.new("gets.chomp")
 puts player1
