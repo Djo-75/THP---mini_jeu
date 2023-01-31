@@ -101,7 +101,7 @@ class HumanPlayer < Player
         end
     end
 
-# binding.pry
+binding.pry
 
 
 end
