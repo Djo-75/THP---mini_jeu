@@ -13,9 +13,11 @@ require_relative 'lib/player'
 # Maintenant c'est open bar pour tester ton application. Tous les fichiers importants sont chargés
 # Tu peux faire User.new, Event.new, binding.pry, User.all, etc.
 
-player1 = Player.new("Josiane")
-player2 = Player.new("José")
+# player1 = Player.new("Josiane")
+# player2 = Player.new("José")
 
 
+# player3 = HumanPlayer.new("Tobi")
 
-binding.pry
+
+# binding.pry
