@@ -32,12 +32,12 @@ class Player
         other_player.name # quand on appelle un argument, toujours le rappeler dans la méthode
         puts "#{@name} attaque #{other_player.name}"
 
-        other_player.compute_damage
+        n = other_player.compute_damage # stocker dans variable pour garder la même valeur
 
-        puts "Il/elle lui inflige #{other_player.compute_damage} dégâts"    # ça marche
+        puts "Il/elle lui inflige #{n} dégâts"    # ça marche
         puts
 
-        other_player.gets_damage(other_player.compute_damage) # je stocke ici 
+        other_player.gets_damage(n) # je stocke ici 
     end
 
     def compute_damage
