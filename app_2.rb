@@ -14,11 +14,9 @@ puts "------------------------------------------------"
 
 puts puts
 
-# puts "Quel est ton prénom ?"
-# print ">" 
-# puts gets.chomp
+puts "Quel est ton prénom ?"
 
-user = HumanPlayer.new("Jordan")
+user = HumanPlayer.new(gets.chomp)
 
 player1 = Player.new("Josiane")
 player2 = Player.new("José")
